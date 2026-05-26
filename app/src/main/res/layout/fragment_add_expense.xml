@@ -5,25 +5,33 @@
     android:orientation="vertical"
     android:padding="20dp">
 
+    <Space
+        android:layout_width="370dp"
+        android:layout_height="80dp" />
+
     <EditText
         android:id="@+id/etDescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="370dp"
+        android:layout_height="76dp"
         android:hint="תיאור ההוצאה" />
+
+    <Space
+        android:layout_width="371dp"
+        android:layout_height="35dp" />
 
     <EditText
         android:id="@+id/etAmount"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:hint="סכום" />
+        android:layout_width="371dp"
+        android:layout_height="70dp"
+        android:hint="סכום"
+        android:inputType="numberDecimal" />
 
     <Spinner
         android:id="@+id/spinnerCategory"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="371dp"
+        android:layout_height="61dp"
         android:layout_marginTop="10dp"
-        android:entries="@array/categories_array"/>
+        android:entries="@array/categories_array" />
 
     <Button
         android:id="@+id/btnPickDate"

@@ -7,13 +7,17 @@
     android:background="#FFFFFF">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="384dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
         android:text="חיפוש וסינון הוצאות"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:layout_marginBottom="15dp"/>
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,8 +27,8 @@
 
         <EditText
             android:id="@+id/etSearchDescription"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="291dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:hint="חפש לפי תיאור (למשל: סרט)" />
 
@@ -33,6 +37,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="חפש" />
+
+        <Space
+            android:layout_width="24dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -43,16 +53,16 @@
 
         <EditText
             android:id="@+id/etFilterAmount"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="284dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:inputType="numberDecimal"
-            android:hint="הצג הוצאות מעל סכום..." />
+            android:hint="הצג הוצאות מעל סכום..."
+            android:inputType="numberDecimal" />
 
         <Button
             android:id="@+id/btnFilter"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:text="סנן" />
     </LinearLayout>
 

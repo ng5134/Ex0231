@@ -6,24 +6,28 @@
     android:padding="20dp">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="369dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
         android:text="עדכון הוצאה"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:layout_marginBottom="10dp"/>
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/etUpdateDescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="373dp"
+        android:layout_height="91dp"
         android:hint="תיאור חדש" />
+
+    <Space
+        android:layout_width="375dp"
+        android:layout_height="42dp" />
 
     <EditText
         android:id="@+id/etUpdateAmount"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:hint="סכום חדש" />
+        android:layout_width="375dp"
+        android:layout_height="94dp"
+        android:hint="סכום חדש"
+        android:inputType="numberDecimal" />
 </LinearLayout>
