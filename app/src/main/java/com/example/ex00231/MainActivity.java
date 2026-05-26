@@ -2,48 +2,36 @@ package com.example.ex00231;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-
-import androidx.annotation.NonNull;
+import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //when the app is opening show the ברירת מחדל את המסך הוספה
+
+        // טעינת מסך ברירת המחדל (הוספה) בפעם הראשונה
         if (savedInstanceState == null) {
             loadFragment(new AddExpenseFragment());
         }
-    }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_menu, menu);
-        return true;
-    }
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
 
-        if (id == R.id.action_add) {
-            loadFragment(new AddExpenseFragment());
-            return true;
-        } else if (id == R.id.action_list) {
-            loadFragment(new ViewExpensesFragment());
-            return true;
-        } else if (id == R.id.action_search) {
-            loadFragment(new SearchExpensesFragment());
-            return true;
-        } else if (id == R.id.action_credits) {
-            // מסך הקרדיטים הוא Activity נפרד (לפי הדרישות), לכן נשתמש ב-Intent
-            startActivity(new Intent(this, CreditsActivity.class));
-            return true;
-        }
+        // חיבור כפתורי הניווט התחתוhtml וקביעת ההתנהגות שלהם בלחיצה
+        Button btnAdd = findViewById(R.id.btn_nav_add);
+        Button btnView = findViewById(R.id.btn_nav_view);
+        Button btnSearch = findViewById(R.id.btn_nav_search);
+        Button btnCredits = findViewById(R.id.btn_nav_credits);
 
-        return super.onOptionsItemSelected(item);
+        btnAdd.setOnClickListener(v -> loadFragment(new AddExpenseFragment()));
+        btnView.setOnClickListener(v -> loadFragment(new ViewExpensesFragment()));
+        btnSearch.setOnClickListener(v -> loadFragment(new SearchExpensesFragment()));
+
+        btnCredits.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, CreditsActivity.class);
+            startActivity(intent);
+        });
     }
 
     private void loadFragment(Fragment fragment) {
@@ -52,5 +40,4 @@ public class MainActivity extends AppCompatActivity {
                 .replace(R.id.main_fragment_container, fragment)
                 .commit();
     }
-
 }
