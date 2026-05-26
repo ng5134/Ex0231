@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Ex00231</string>
+    <string-array name="categories_array">
+        <item>אוכל</item>
+        <item>בילויים</item>
+        <item>תחבורה</item>
+        <item>קניות</item>
+        <item>אחר</item>
+    </string-array>
 </resources>
